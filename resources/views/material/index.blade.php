@@ -1,7 +1,7 @@
 @extends('layout/main')
 
 @section('content')
-    <div class="container mb-3">
+    <div class="container my-4">
         <div class="row">
             <div class="col">
                 <h2>Mata Pelajaran</h2>
@@ -9,7 +9,7 @@
             </div>
             <div class="col">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
-                    <button class="btn btn-primary me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah</button>
+                    <button class="btn btn-danger me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah</button>
                     <a href="/material_delete" class="btn btn-outline-danger">- Hapus</a>
                 </div>    
             </div>
@@ -52,7 +52,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-danger">Simpan</button>
             </div>
         </form>
         </div>

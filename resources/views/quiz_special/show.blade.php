@@ -9,7 +9,7 @@
         </div>
 
         <div class="col-4 mt-5">
-            <button class="btn btn-primary me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah Soal</button>
+            <button class="btn btn-danger me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah Soal</button>
         </div>
     </div>
     <div class="row">
@@ -127,7 +127,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-danger">Simpan</button>
                 </div>
             </form>
         </div>

@@ -30,7 +30,7 @@
             </div>
 
             <div class="mb-3 d-grid">
-                <button class="btn btn-primary" name="submit" type="submit">Register</button>
+                <button class="btn btn-danger" name="submit" type="submit">Register</button>
             </div>
         </form>
     </div>

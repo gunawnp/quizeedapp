@@ -9,7 +9,7 @@
             </div>
             <div class="col">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
-                    <a href="/material" class="btn btn-primary me-md-2" type="button">< Kembali</a>
+                    <a href="/material" class="btn btn-danger me-md-2" type="button">< Kembali</a>
                 </div>   
             </div>
         </div>

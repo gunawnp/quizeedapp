@@ -7,7 +7,7 @@
                 <form action="/quiz_general/{{ $m_id }}" method="POST">
                     @csrf
                     <input type="hidden" name="id_ref" value="{{ $m_id }}">
-                    <button class="btn btn-primary text-end btn-lg" type="submit">+ Tambah</button>
+                    <button class="btn btn-danger text-end btn-lg" type="submit">+ Tambah</button>
                 </form>
             </div>
             

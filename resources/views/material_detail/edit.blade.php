@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="mb-3 d-grid mt-4">
-                        <button class="btn btn-primary py-2" name="submit" type="submit">Update</button>
+                        <button class="btn btn-danger py-2" name="submit" type="submit">Update</button>
                     </div>
                 </form>
             @endforeach

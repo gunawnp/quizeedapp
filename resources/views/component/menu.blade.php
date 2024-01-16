@@ -1,9 +1,9 @@
-<header class="p-3 bg-primary text-white">
+<header class="p-3 bg-danger text-white">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-between">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img height="40px" width="40px" src="{{ url('quized-logo.svg') }}" alt="">
-                <strong class="fs-3 ms-2">Quized</strong>
+                <img height="40px" width="40px" src="{{ url('logo-aci.png') }}" alt="">
+                <strong class="fs-3 ms-2">ACI Quiz</strong>
             </a>
 
             <div class="text-center text-lg-start">

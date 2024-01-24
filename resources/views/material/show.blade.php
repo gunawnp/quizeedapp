@@ -7,16 +7,18 @@
                 <h2>Mata Pelajaran</h2>
                 <h5>Pendidikan Kewarganegaraan</h5>
 
-                <a href="/material_detail/{{ $data->id }}" class="btn btn-danger my-3 me-2">Tambah Materi</a>
-                <a href="/material_detail/edit/{{ $data->id }}" class="btn btn-outline-success my-3 me-2">Update Materi</a>
+                @if (Auth::user()->roleId == 1)
+                    <a href="/material_detail/{{ $data->id }}" class="btn btn-danger my-3 me-2">Tambah Materi</a>
+                    <a href="/material_detail/edit/{{ $data->id }}" class="btn btn-outline-success my-3 me-2">Update Materi</a>
 
-                @foreach ($data->material_detail as $item)
-                    <form onsubmit="return confirm('Yakin mau hapus data?')" class="d-inline" action="/material_detail/{{ $item->id }}" method="POST">
-                        @csrf
-                        @method('delete')
-                        <button class="btn btn-outline-danger" type="submit">Hapus Materi</button>
-                    </form>
-                @endforeach
+                    @foreach ($data->material_detail as $item)
+                        <form onsubmit="return confirm('Yakin mau hapus data?')" class="d-inline" action="/material_detail/{{ $item->id }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-outline-danger" type="submit">Hapus Materi</button>
+                        </form>
+                    @endforeach
+                @endif
 
             </div>
             <div class="col">
@@ -42,7 +44,11 @@
 
     <div class="mt-4"> 
         <h5>Quiz</h5>
-        <a href="/quiz_special/{{ $data->id }}/1" class="btn btn-danger btn-lg my-3 me-2">Quiz Khusus</a>
+        @if (Auth::user()->roleId == 1)
+            <a href="/quiz_special/{{ $data->id }}/1" class="btn btn-danger btn-lg my-3 me-2">Quiz Khusus</a>
+        @else
+            <a href="/quiz_special_user/{{ $data->id }}" class="btn btn-danger btn-lg my-3 me-2">Quiz Khusus</a>
+        @endif
         <a href="/quiz_general/{{ $data->id }}" class="btn btn-outline-success btn-lg my-3 me-2">Quiz Umum</a>
     </div>
 @endsection

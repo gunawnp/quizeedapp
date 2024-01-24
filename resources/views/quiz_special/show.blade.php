@@ -10,6 +10,8 @@
 
         <div class="col-4 mt-5">
             <button class="btn btn-danger me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah Soal</button>
+            <a class="btn btn-outline-danger me-md-2" href="/result_quiz_special/{{ $data->id }}">Lihat Hasil</a>
+            <a class="btn btn-warning me-md-2" href="/material/{{ $data->id }}">Kembali</a>
         </div>
     </div>
     <div class="row">

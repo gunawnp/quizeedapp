@@ -75,7 +75,8 @@ class SessionController extends Controller
         $data = [
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
+            'roleId' => $request->roleId
         ];
 
         User::create($data);

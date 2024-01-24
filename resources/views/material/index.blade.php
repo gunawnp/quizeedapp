@@ -8,10 +8,12 @@
                 <h5>Pendidikan Kewarganegaraan</h5>
             </div>
             <div class="col">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
-                    <button class="btn btn-danger me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah</button>
-                    <a href="/material_delete" class="btn btn-outline-danger">- Hapus</a>
-                </div>    
+                @if (Auth::user()->roleId == 1)
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+                        <button class="btn btn-danger me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah</button>
+                        <a href="/material_delete" class="btn btn-outline-danger">- Hapus</a>
+                    </div>    
+                @endif
             </div>
         </div>
     </div>

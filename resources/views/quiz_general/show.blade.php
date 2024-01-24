@@ -4,12 +4,14 @@
     
     <div class="row mb-2">
         <div class="col-8">
-            <h2>Bab {{ $data->id }}</h2>
-            <h5>{{ $data->title }}</h5>
+            <h2>Bab {{ $dataM->bab }}</h2>
+            <h2>{{ $dataM->title }}</h2>
         </div>
 
         <div class="col-4 mt-5">
             <button class="btn btn-danger me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah Soal</button>
+            <a href="/result_quiz_general/{{ $dataM->id }}/{{ $data->id }}" class="btn btn-outline-danger me-md-2">Lihat Hasil</a>
+            <a href="/quiz_general/{{ $dataM->id }}" class="btn btn-warning">Kembali</a>
         </div>
     </div>
     <div class="row">
@@ -24,7 +26,7 @@
                             </div>
                             <div class="col d-grid d-sm-flex justify-content-md-end ">
                                 <div>
-                                    <form onsubmit="return confirm('Yakin mau hapus data?')" class="" action="/quiz_general_detail/{{  $dataQGD->quiz_general_id }}/{{ $dataQGD->id }}" method="POST">
+                                    <form onsubmit="return confirm('Yakin mau hapus data?')" class="" action="/quiz_general_detail/{{ $dataM->id }}/{{  $dataQGD->quiz_general_id }}/{{ $dataQGD->id }}" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger" type="submit">Hapus</button>
@@ -72,13 +74,11 @@
                     <h6>Nomor Soal</h6>
                     @if (isset($data->quiz_general_detail))
                         @foreach ($data->quiz_general_detail as $item)
-                            <a href="/quiz_general/{{$item->quiz_general_id}}/{{ $item->id }}" class="btn btn-outline-dark me-3 mt-3"> {{ $item->number }} </a>
+                            <a href="/quiz_general/{{ $dataM->id }}/{{$item->quiz_general_id}}/{{ $item->id }}" class="btn btn-outline-dark me-3 mt-3"> {{ $item->number }} </a>
                         @endforeach
                     @else
                         <p>- Data Kosong -</p>
                     @endif
-
-                    
                 </div>
             </div>
         </div>
@@ -94,6 +94,7 @@
         </div>
             <form action="/quiz_general_detail" method="POST">
                 @csrf
+                <input type="hidden" name="id_mat" value="{{ $dataM->id }}">
                 <input type="hidden" name="id_ref" value="{{ $data->id }}">
                 <div class="modal-body">
                     <div class="mb-3">

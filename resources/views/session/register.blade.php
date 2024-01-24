@@ -14,9 +14,11 @@
         @include('component/message')
         <form action="/create" method="POST">
             @csrf
+            <input type="hidden" value="2" name="roleId">
+
             <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
-                <input type="name" value="{{ Session::get('name') }}" name="name" class="form-control">
+                <input type="text" value="{{ Session::get('name') }}" name="name" class="form-control">
             </div>
 
             <div class="mb-3">
